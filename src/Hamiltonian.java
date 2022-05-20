@@ -64,7 +64,7 @@ public class Hamiltonian {
         System.out.println(pathJoin);
     }
 
-    public int[][] rename() {
+    public int[][] rename(int[][] gr) {
         int[][] renamed = new int[vertexes][vertexes];
         System.out.println("Renamed graph:");
         System.out.print("    | ");
@@ -83,9 +83,9 @@ public class Hamiltonian {
             int p = 0;
             System.out.printf("%-6s", (i + 1) + " | ");
             for (int j = 0; j < vertexes; j++) {
-                System.out.printf("%-4s", graph[path[i]][path[j]] + " ");
-                p += graph[path[i]][path[j]];
-                renamed[i][j] = graph[path[i]][path[j]];
+                System.out.printf("%-4s", gr[path[i]][path[j]] + " ");
+                p += gr[path[i]][path[j]];
+                renamed[i][j] = gr[path[i]][path[j]];
             }
             System.out.printf("%-4s", p);
             sump += p;
