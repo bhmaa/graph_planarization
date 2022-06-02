@@ -34,12 +34,12 @@ public class Intersections {
                                 int prev = edges.indexOf(edgePrev);
                                 int curr = edges.indexOf(edgeCurr);
                                 if (intersections.get(prev).size() <= curr) {
-                                    for (int t = intersections.get(prev).size()-1; t <= curr; t++) {
+                                    for (int t = intersections.get(prev).size(); t <= curr; t++) {
                                         intersections.get(prev).add(0);
                                     }
                                 }
-                                if (intersections.get(curr).size() <= curr) {
-                                    for (int t = intersections.get(curr).size()-1; t <= curr; t++) {
+                                if (intersections.get(curr).size() <= prev) {
+                                    for (int t = intersections.get(curr).size(); t <= prev; t++) {
                                         intersections.get(curr).add(0);
                                     }
                                 }
